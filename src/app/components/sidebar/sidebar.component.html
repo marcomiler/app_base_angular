@@ -1,0 +1,58 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapsed()">A</button>
+    <div *ngIf="collapsed" @fadeInOut class="logo-text">Angular</div>
+    <button *ngIf="collapsed" @rotate class="btn-close" (click)="CloseSidenav()">
+      <i class="fal fa-times close-icon"></i>
+    </button>
+  </div>
+
+  <div class="scrollwrap scrollwrap_delayed">
+    <ul class="sidenav-nav">
+      <li *ngFor="let data of navData" class="sidenav-nav-item">
+        <a
+          *ngIf="data.items && data.items.length > 0"
+          class="sidenav-nav-link"
+          (click)="handleClick(data)"
+          [ngClass]="getActivateClass(data)"
+        >
+          <i class="sidenav-link-icon" [ngClass]="data.icon"></i>
+          <span
+            *ngIf="collapsed"
+            @fadeInOut
+            class="sidenav-link-text"
+          >
+            {{ data.label }}
+          </span>
+          <i
+            *ngIf="data.items && collapsed"
+            class="menu-collapse-icon"
+            [ngClass]="!data.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
+          ></i>
+        </a>
+
+        <a
+          *ngIf="!data.items || (data.items && data.items.length === 0)"
+          [routerLink]="data.routerLink"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}"
+          (click)="shrinkItems(data)"
+          class="sidenav-nav-link"
+        >
+          <i class="sidenav-link-icon" [class]="data.icon"></i>
+          <span *ngIf="collapsed" @fadeInOut class="sidenav-link-text">{{ data.label }}</span>
+        </a>
+
+        <div *ngIf="collapsed && data.items && data.items.length > 0">
+          <app-sublevel-menu
+            [data]="data"
+            [multiple]="multiple"
+            [expanded]="data.expanded"
+            [collapsed]="collapsed"
+          />
+        </div>
+
+      </li>
+    </ul>
+  </div>
+</div>
