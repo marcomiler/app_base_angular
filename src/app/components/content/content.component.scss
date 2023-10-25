@@ -1,3 +1,5 @@
+@import "../../../assets/styles/variables";
+
 .app-body_container {
   width: calc(100% - 5rem);
   height: 100vh;
@@ -6,7 +8,7 @@
   top: 0;
   position: relative;
   transition: all 0.5s ease;
-  background-color: #f4f7fa;
+  background-color: $light-theme-light-primary-color;
 
   div {
     padding: 1rem;

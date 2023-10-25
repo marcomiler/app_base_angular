@@ -1,0 +1,69 @@
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Alerts
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+
+.alert {
+  padding: 12px 16px;
+}
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Alerts Text Color
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+
+.alert-text-danger {
+  color: $dark-danger-color;
+}
+
+.alert-text-warning {
+  color: $dark-warning-color;
+}
+
+.alert-text-info {
+  color: $dark-info-color;
+}
+
+.alert-text-success {
+  color: $dark-success-color;
+}
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Alerts Background Color
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+.alert-danger {
+  background-color: $light-theme-second-body-color;
+}
+
+.alert-warning {
+  background-color: #fefaeb;
+  color: $dark-warning-color;
+}
+
+.alert-info {
+  background-color: #f6fcfd;
+  color: $dark-info-color;
+}
+
+.alert-success {
+  background-color: #eafaf6;
+  color: $dark-success-color;
+}
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Alerts Border Color
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+
+.alert-border-danger {
+  border: 1px solid $danger-color;
+}
+
+.alert-border-warning {
+  border: 1px solid $warning-color;
+}
+
+.alert-border-info {
+  border: 1px solid $info-color;
+}
+
+.alert-border-success {
+  border: 1px solid $success-color;
+}

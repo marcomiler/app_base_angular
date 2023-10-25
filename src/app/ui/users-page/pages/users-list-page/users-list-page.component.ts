@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-users-list-page',
   standalone: true,
-  imports: [CommonModule],
+  imports: [MatButtonModule],
   templateUrl: './users-list-page.component.html',
-  styleUrls: ['./users-list-page.component.scss']
+  styleUrls: ['./users-list-page.component.scss'],
 })
-export class UsersListPageComponent {
-
-}
+export class UsersListPageComponent {}

@@ -78,7 +78,6 @@ const navbarData: INavbarData[] = [
       ]),
     ]),
   ],
-  styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent implements OnInit {
   @Output() onToggleSidenav: EventEmitter<ISideNavToggle> = new EventEmitter();

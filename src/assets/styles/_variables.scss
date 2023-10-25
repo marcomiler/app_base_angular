@@ -1,0 +1,108 @@
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Colors
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+
+// Light Theme Colors
+$light-theme-body-color: #fefefe;
+$light-theme-second-body-color: #fcf3f4;
+$light-theme-text-color: #393939;
+$light-theme-primary-color: #105ef5;
+$light-theme-light-primary-color: #f8fcff;
+$light-theme-border-color: #393939;
+$light-theme-secondary-color: #fcf1ed;
+
+//Sidebar properties
+$light-theme-shadow: rgba(113, 122, 131, 0.11);
+$light-theme-sidebar-icon-color: #393939;
+$light-theme-sidebar-link-color: #393939;
+$light-theme-sidebar-link-active-color: #e3f5ff;
+$light-theme-sidebar-text-link-active-color: #105ef5;
+$light-theme-sidebar-icon-active-color: #105ef5;
+
+// Dark Theme Colors
+$dark-theme-body-color: #1c1f25;
+$dark-theme-second-body-color: #2e343e;
+$dark-theme-text-color: #393939;
+$dark-theme-primary-color: #105ef5;
+$dark-theme-light-primary-color: #e3f5ff;
+$dark-theme-border-color: #d8d8d8;
+$dark-theme-secondary-color: #777e89;
+
+//Sidebar properties
+$dark-theme-sidebar-icon-color: #105ef5;
+$dark-theme-sidebar-link-color: #f3f3f3;
+$dark-theme-sidebar-link-active-color: #393939;
+
+// Light Colors
+$success-color: #00c292;
+$info-color: #03c9d7;
+$warning-color: #fec90f;
+$danger-color: #e46a76;
+$indigo-color: #551a8b;
+
+// Dark Colors
+$dark-danger-color: #5d363a;
+$dark-warning-color: #655419;
+$dark-info-color: #425a61;
+$dark-success-color: #145242;
+
+$muted-color: #949db2;
+$white-color: #ffffff;
+$black-color: #000;
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Material Theme Colors
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+$light-theme-primary-palette: (
+  100: #fcf1ed,
+  500: $light-theme-primary-color,
+  700: #425a61,
+  contrast: (
+    100: #393939,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+
+$light-theme-accent-palette: (
+  100: #fcf1ed,
+  500: #fb9678,
+  700: #425a61,
+  contrast: (
+    100: #393939,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+
+$light-theme-warn-palette: (
+  100: #fcf1ed,
+  500: #e46a76,
+  700: #5d363a,
+  contrast: (
+    100: #393939,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Font Family
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url("../fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
+}
+
+$bodyfont: "Work Sans", sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $bodyfont;
+  color: $light-theme-text-color;
+}

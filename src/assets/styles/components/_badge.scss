@@ -1,0 +1,21 @@
+.badge {
+  padding: 3px 12px;
+  font-size: 12px;
+  color: $light-theme-body-color;
+}
+
+.badge-info {
+  background-color: $info-color;
+}
+
+.badge-primary {
+  background-color: $light-theme-primary-color;
+}
+
+.badge-danger {
+  background-color: $danger-color;
+}
+
+.badge-success {
+  background-color: $success-color;
+}

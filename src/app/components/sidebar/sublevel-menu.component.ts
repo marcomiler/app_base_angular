@@ -101,7 +101,6 @@ import { INavbarData } from '@components/sidebar/helper/helper';
       </li>
     </ul>
   `,
-  styleUrls: ['./sidebar.component.scss'],
 })
 export class SublevelComponent {
   @Input() data: INavbarData = {
