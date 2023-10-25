@@ -2,7 +2,7 @@
 
 .app-body_container {
   width: calc(100% - 5rem);
-  height: 100vh;
+  // height: 100vh;
   margin-left: 5rem;
   z-index: 0;
   top: 0;
@@ -10,9 +10,6 @@
   transition: all 0.5s ease;
   background-color: $light-theme-light-primary-color;
 
-  div {
-    padding: 1rem;
-  }
 }
 
 .body-trimmed {

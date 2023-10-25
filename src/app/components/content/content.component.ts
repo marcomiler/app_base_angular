@@ -1,19 +1,21 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '@components/header/header.component';
 import { ISideNavToggle } from '@components/sidebar/helper/helper';
 import { SidebarComponent } from '@components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [RouterModule, NgClass, SidebarComponent],
+  imports: [RouterModule, NgClass, SidebarComponent, HeaderComponent],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss'],
 })
 export class ContentComponent {
   isSidenavCollapsed: boolean = false;
   screenWidth: number = 0;
+  selectedLanguage: any;
 
   onToggleSidenav(data: ISideNavToggle): void {
     this.screenWidth = data.screenWidth;
