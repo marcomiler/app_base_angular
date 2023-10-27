@@ -1,6 +1,16 @@
-<button mat-raised-button color="primary" (click)="HandleClick()">PRIMARY</button>
-<button mat-raised-button color="secondary">SECONDARY</button>
-<button mat-raised-button color="accent">ACCENT</button>
-<button mat-raised-button color="warn">WARN</button>
-<a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+<div style="margin-top: 150px">
+  <button mat-raised-button color="primary" (click)="HandleClick()">PRIMARY</button>
+  <button mat-raised-button color="secondary" (click)="incrementNumber()">INCREMENT</button>
+  <button mat-raised-button color="accent" (click)="changeTitle('accent')">ACCENT</button>
+  <button mat-raised-button color="warn" (click)="changeTitle('warn')">WARN</button>
+  <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+</div>
+
+<br>
+<p>CONTEO: {{ value }}</p>
+<p>TITULO: {{ title }}</p>
+
+<br>
+<br>
+<app-prueba />
 
