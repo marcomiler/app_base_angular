@@ -2,36 +2,7 @@
 // Colors
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 
-// Light Theme Colors
-$light-theme-body-color: #fefefe;
-$light-theme-second-body-color: #fcf3f4;
-$light-theme-text-color: #393939;
-$light-theme-primary-color: #105ef5;
-$light-theme-light-primary-color: #f8fcff;
-$light-theme-border-color: #393939;
-$light-theme-secondary-color: #fcf1ed;
-
-//Sidebar properties
-$light-theme-shadow: rgba(113, 122, 131, 0.11);
-$light-theme-sidebar-icon-color: #393939;
-$light-theme-sidebar-link-color: #393939;
-$light-theme-sidebar-link-active-color: #e3f5ff;
-$light-theme-sidebar-text-link-active-color: #105ef5;
-$light-theme-sidebar-icon-active-color: #105ef5;
-
-// Dark Theme Colors
-$dark-theme-body-color: #1c1f25;
-$dark-theme-second-body-color: #2e343e;
-$dark-theme-text-color: #393939;
-$dark-theme-primary-color: #105ef5;
-$dark-theme-light-primary-color: #e3f5ff;
-$dark-theme-border-color: #d8d8d8;
-$dark-theme-secondary-color: #777e89;
-
-//Sidebar properties
-$dark-theme-sidebar-icon-color: #105ef5;
-$dark-theme-sidebar-link-color: #f3f3f3;
-$dark-theme-sidebar-link-active-color: #393939;
+$primary-color: #105ef5;
 
 // Light Colors
 $success-color: #00c292;
@@ -50,12 +21,49 @@ $muted-color: #949db2;
 $white-color: #ffffff;
 $black-color: #000;
 
+//PRUEBA !
+$themes: (
+  "light": (
+    body-color: #ffffff,
+    second-body-color: #f9fcfe,
+    //#a7ddff,
+    text-color: #393939,
+    primary-color: $primary-color,
+    light-primary-color: #e3f5ff,
+    border-color: #393939,
+    box-shadow: rgba(113, 122, 131, 0.11),
+    //SIDEBAR PROPERTIES
+    sidebar-icon-color: #393939,
+    sidebar-link-color: #393939,
+    sidebar-link-bg-active-color: #e3f5ff,
+    sidebar-text-link-active-color: $primary-color,
+    sidebar-icon-active-color: $primary-color,
+  ),
+  "dark": (
+    body-color: #1c1f25,
+    second-body-color: #2d343e,
+    text-color: #fcf3f4,
+    primary-color: $primary-color,
+    light-primary-color: #e3f5ff,
+    border-color: #d8d8d8,
+    box-shadow: rgba(113, 122, 131, 0.11),
+    //SIDEBAR PROPERTIES
+    sidebar-icon-color: #fcf3f4,
+    sidebar-link-color: #1c1f25,
+    sidebar-link-bg-active-color: #2d343e,
+    sidebar-text-link-active-color: #ffffff,
+    sidebar-icon-active-color: $primary-color,
+  ),
+);
+
+//----------------------------------------//
+
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 // Material Theme Colors
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 $light-theme-primary-palette: (
   100: #fcf1ed,
-  500: $light-theme-primary-color,
+  500: $primary-color,
   700: #425a61,
   contrast: (
     100: #393939,
@@ -86,6 +94,42 @@ $light-theme-warn-palette: (
   ),
 );
 
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+$text-sizes: (
+  "xs": (
+    font-size: 0.75rem,
+    // 12px
+    line-height: $base-line-height,
+  ),
+  "sm": (
+    font-size: 0.875rem,
+    // 14px
+    line-height: $base-line-height,
+  ),
+  "base": (
+    font-size: 1rem,
+    // 16px
+    line-height: $base-line-height,
+  ),
+  "md": (
+    font-size: 1.125rem,
+    // 18px
+    line-height: $base-line-height * 2,
+  ),
+  "lg": (
+    font-size: 1.25rem,
+    // 20px
+    line-height: $base-line-height * 2,
+  ),
+  "xl": (
+    font-size: 1.5rem,
+    // 24px
+    line-height: $base-line-height * 2,
+  ),
+);
+
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 // Font Family
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
@@ -104,5 +148,4 @@ body {
 body {
   margin: 0;
   font-family: $bodyfont;
-  color: $light-theme-text-color;
 }

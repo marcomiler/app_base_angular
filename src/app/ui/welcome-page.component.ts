@@ -7,10 +7,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   selector: 'app-welcome-page',
   standalone: true,
   imports: [FormsModule, MatSlideToggleModule],
-  template: `<mat-slide-toggle
-    (ngModelChange)="onChange($event)"
-    [(ngModel)]="isDarkThemeActive"
-  ></mat-slide-toggle>`,
+  template: `<div style="margin-top: 150px">
+    <mat-slide-toggle
+      (ngModelChange)="onChange($event)"
+      [(ngModel)]="isDarkThemeActive"
+    ></mat-slide-toggle>
+  </div>`,
 })
 export class WelcomePageComponent {
   isDarkThemeActive = false;
@@ -18,10 +20,11 @@ export class WelcomePageComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   onChange(newValue: boolean): void {
+    const app = this.document.querySelector('.app');
     if (newValue) {
-      this.document.body.classList.add('dark-mode');
+      app?.setAttribute('data-theme', 'dark');
     } else {
-      this.document.body.classList.remove('dark-mode');
+      app?.setAttribute('data-theme', 'light');
     }
   }
 }

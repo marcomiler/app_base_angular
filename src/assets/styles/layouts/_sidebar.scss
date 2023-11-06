@@ -1,17 +1,18 @@
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 // Sidebar
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+@import "../variables";
+@import "../mixins";
 
 .sidenav {
-  background-color: $light-theme-body-color;
+  background-color: var(--body-color);
   transition: all 0.5s ease;
   position: fixed;
   z-index: 2;
   top: 0;
   width: 5rem;
   height: 100vh;
-  // box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
-  box-shadow: $light-theme-shadow;
+  box-shadow: var(--box-shadow);
 
   .logo-container {
     display: flex;
@@ -34,9 +35,8 @@
 
     .logo-text {
       margin-left: 1.5rem;
-      font-size: 24px;
+      @include text-setting("xl");
       font-weight: 700;
-      color: $light-theme-text-color;
     }
 
     .btn-close {
@@ -50,8 +50,8 @@
       border: none;
 
       .fa-times {
-        color: $light-theme-sidebar-icon-color;
-        font-size: 24px;
+        color: var(--sidebar-icon-color);
+        @include text-setting("xl");
       }
     }
   }
@@ -79,13 +79,13 @@
       display: flex;
       align-items: center;
       height: 3rem;
-      color: $light-theme-text-color;
+      color: var(--text-color);
       text-decoration: none;
       border-radius: 0.625rem;
       transition: all 0.3s ease;
 
       .sidenav-link-icon {
-        font-size: 22px;
+        @include text-setting("lg");
         width: 2rem;
         min-width: 2rem;
         margin: 0 0.5rem;
@@ -98,38 +98,38 @@
     }
 
     .sidenav-nav-link:hover {
-      background-color: $light-theme-sidebar-link-active-color;
-      color: $light-theme-sidebar-text-link-active-color;
+      background-color: var(--sidebar-link-bg-active-color);
+      color: var(--sidebar-text-link-active-color);
 
       .menu-collapse-icon {
-        color: $light-theme-sidebar-text-link-active-color;
+        color: var(--sidebar-text-link-active-color);
       }
     }
   }
 }
 
 .active {
-  background-color: $light-theme-sidebar-link-active-color;
+  background-color: var(--sidebar-link-bg-active-color);
 
   .menu-collapse-icon,
   .sidenav-link-icon,
   .sidenav-link-text {
-    color: $light-theme-sidebar-text-link-active-color;
+    color: var(--sidebar-text-link-active-color);
     font-weight: 500;
   }
 }
 
 .active-sublevel {
-  color: $light-theme-sidebar-text-link-active-color !important;
+  color: var(--sidebar-text-link-active-color) !important;
 }
 
 .menu-collapse-icon {
-  font-size: 25px;
+  @include text-setting("xl");
   width: 2rem;
   min-width: 2rem;
   margin: auto 0.5rem auto auto;
   text-align: center;
-  color: $light-theme-sidebar-icon-color;
+  color: var(--sidebar-icon-color) !important;
 }
 
 .sublevel-nav {
@@ -162,7 +162,7 @@
     }
 
     .sublevel-nav-link:hover {
-      color: $light-theme-sidebar-text-link-active-color;
+      color: var(--sidebar-text-link-active-color) !important;
       font-weight: 500;
     }
   }

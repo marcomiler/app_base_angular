@@ -21,12 +21,14 @@ $light-theme: mat.define-light-theme(
   )
 );
 
+//TODO: De momento el Dark theme de Material será el mismo que el Light
 $dark-theme: mat.define-dark-theme(
   (
     color: (
-      primary: mat.define-palette(mat.$deep-purple-palette, A200),
-      accent: mat.define-palette(mat.$pink-palette, 300),
-      // warn:
+      primary: mat.define-palette($light-theme-primary-palette),
+      accent: mat.define-palette($light-theme-accent-palette),
+      warn: mat.define-palette($light-theme-warn-palette),
+      // warn: A. Material ya define por defecto la paleta para warn
     ),
     typography: $typography,
     density: 0,
@@ -40,6 +42,6 @@ $my-custom-level: mat.define-typography-level(
   $font-size: 1rem,
 );
 
-.dark-mode {
+.app[data-theme="dark"] {
   @include mat.all-component-colors($dark-theme);
 }

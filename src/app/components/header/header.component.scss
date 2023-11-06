@@ -1,27 +1,22 @@
 // @import 'assets/styles/_variables.scss';
-@import '../../../assets/styles/_variables.scss';
+@import "../../../assets/styles/_variables.scss";
 
 .head {
   width: calc(100% - 5rem);
   margin-left: 5rem; //TODO::
   z-index: 1;
-  transition: all .5s ease;
-  // background-color: $light-theme-body-color;
+  transition: all 0.5s ease;
+  background-color: var(--body-color);
   position: fixed;
   top: 0;
 
   .head-content {
-    // background-color: $light-theme-body-color;
-    background-color: lightgray;//TODO:
-    box-shadow: $light-theme-shadow;
+    background-color: var(--body-color);
+    box-shadow: var(--box-shadow);
     padding: 0.813rem, 1.563rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    // .head-content-left {
-
-    // }
 
     .head-content-right {
       display: flex;
@@ -61,7 +56,7 @@
               color: #699dfa;
             }
           }
-        }        
+        }
       }
 
       .head-user-avatar-container {
@@ -74,7 +69,7 @@
             margin-bottom: -4px;
             width: 50px;
             border-radius: 50px;
-            box-shadow: $light-theme-shadow;
+            box-shadow: var(--box-shadow);
             cursor: pointer;
           }
         }
@@ -86,7 +81,7 @@
           position: absolute;
           top: -2px;
           right: -3px;
-          background-color: $light-theme-primary-color;
+          background-color: $primary-color;
 
           &.pulse {
             animation: pulse-animation 1.2s infinite;
@@ -110,8 +105,8 @@
 .overlay {
   margin-top: 10px;
   border-radius: 0.25rem;
-  background-color: $light-theme-body-color;
-  box-shadow: $light-theme-shadow;
+  background-color: var(--second-body-color);
+  box-shadow: 0px 7px 30px 0px var(--box-shadow) !important;
 }
 
 .overlay-fall {
@@ -133,7 +128,7 @@
 
       img {
         margin-right: 0.6rem;
-        height: 12px;        
+        height: 12px;
       }
     }
 
@@ -152,9 +147,9 @@
       padding: 0.35rem 1.5rem;
       font-size: 14px;
       font-weight: 400;
-      color: #495057;
+      // color: #495057;
       cursor: pointer;
-      
+
       .icon {
         margin-left: 0.6rem;
       }
@@ -168,13 +163,15 @@
 
 .ripple {
   background-position: center;
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  // background-color: var(--second-body-color);
   transition: background 0.8s;
 }
 
 .ripple:hover,
 .ripple:focus {
-  background: #eff2f3 radial-gradient(circle, transparent, 1%, #eff2f3, 1%) center/15000%;
+  background: #eff2f3 radial-gradient(circle, transparent, 1%, #eff2f3, 1%)
+    center/15000%;
 }
 
 .ripple:active {
@@ -194,9 +191,9 @@
 
 @keyframes fall {
   0% {
-    box-shadow:  0 0 0 0 $light-theme-body-color;
+    box-shadow: 0 0 0 0 var(--second-body-color);
   }
   100% {
-    box-shadow: 0 0 0 13px $light-theme-body-color;
+    box-shadow: 0 0 0 13px var(--second-body-color);
   }
 }
