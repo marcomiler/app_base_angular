@@ -57,6 +57,11 @@ const navbarData: INavbarData[] = [
     icon: 'fal fa-chart-bar',
     label: 'Prueba',
   },
+  {
+    routerLink: 'forms',
+    icon: 'fal fa-chart-bar',
+    label: 'Formularios',
+  },
 ];
 
 @Component({

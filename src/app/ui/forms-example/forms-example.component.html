@@ -1,0 +1,73 @@
+<form [formGroup]="form" (submit)="handleClick()">
+  <div class="forms-example_container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Seleccionar una fecha</mat-label>
+      <input
+        matInput
+        type="text"
+        [matDatepicker]="picker"
+        (click)="picker.open()"
+        readonly="true"
+        formControlName="date"
+      >
+      <mat-hint>DD-MM-YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <br />
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Ingrese un número</mat-label>
+      <input
+        matInput
+        NumbersOnly
+        [maxCharacters]="5"
+        formControlName="number"
+      >
+    </mat-form-field>
+
+    <br />
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Ingrese un texto</mat-label>
+      <input
+        matInput
+        StringOnly
+        [maxCharacters]="6"
+        formControlName="string"
+      >
+    </mat-form-field>
+
+    <br />
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Ingrese alphanumerico</mat-label>
+      <input
+        matInput
+        AphaNumeric
+        [maxCharacters]="7"
+        formControlName="alphanumeric"
+      >
+    </mat-form-field>
+
+    <br />
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>DNI</mat-label>
+      <input
+        matInput
+        [identityDocument]="'CE'"
+        formControlName="dni"
+      >
+    </mat-form-field>
+  </div>
+
+  <button type="submit" mat-raised-button color="primary">
+    Probar
+  </button>
+</form>
