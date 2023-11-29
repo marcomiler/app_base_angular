@@ -1,5 +1,5 @@
 <app-sidebar (onToggleSidenav)="onToggleSidenav($event)" />
-<app-header></app-header>
+<app-header [collapsed]="isSidenavCollapsed" [screenWidth]="screenWidth"></app-header>
 <section class="app-body_container" [ngClass]="getBodyClass()">
   <router-outlet></router-outlet>
 </section>

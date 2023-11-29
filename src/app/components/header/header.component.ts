@@ -1,18 +1,25 @@
 import { NgClass, NgFor } from '@angular/common';
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit, inject } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { CdkMenuModule } from '@angular/cdk/menu';
+import {
+  MatSlideToggleChange,
+  MatSlideToggleModule,
+} from '@angular/material/slide-toggle';
+import { ThemeManagerService } from '@core/services/theme-manager.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass, NgFor, OverlayModule, CdkMenuModule],
+  imports: [NgClass, NgFor, OverlayModule, CdkMenuModule, MatSlideToggleModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   @Input() collapsed = false;
   @Input() screenWidth = 0;
+
+  private _themeManager = inject(ThemeManagerService);
 
   canShowSearchAsOverlay = false;
   selectedLanguage: any;
@@ -70,5 +77,10 @@ export class HeaderComponent implements OnInit {
     } else {
       this.canShowSearchAsOverlay = false;
     }
+  }
+
+  switchMode(isDarkMode: MatSlideToggleChange) {
+    const theme = isDarkMode.checked ? 'dark' : 'light';
+    this._themeManager.changeTheme(theme);
   }
 }

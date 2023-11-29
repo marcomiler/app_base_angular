@@ -1,0 +1,11 @@
+@use "./all" as themes;
+@use "./components" as components;
+
+@import "./all";
+@import "./app-theme.mixin.scss";
+
+.dark-theme {
+  @include app-theme-color($mat-dark-theme);
+  @include app-theme($mat-dark-theme);
+  @include components.theme($mat-dark-theme);
+}

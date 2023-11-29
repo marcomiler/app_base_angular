@@ -1,0 +1,22 @@
+@use "@angular/material" as mat;
+@use "./themes/components/" as components;
+
+@import "./variables";
+@import "./global";
+@import "./mixins";
+@import "./core/app";
+@import "./grid/grid";
+@import "./layouts/layouts";
+@import "./components/components";
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+@include mat.core();
+@import "./themes/_all.scss";
+@import "./themes/app-theme.mixin.scss";
+
+@include app-theme($mat-light-theme);
+@include components.theme($mat-light-theme);
+
+@media (prefers-color-scheme: dark) {
+  @include app-theme-color($mat-dark-theme);
+}

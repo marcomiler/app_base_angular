@@ -64,6 +64,7 @@ const navbarData: INavbarData[] = [
   standalone: true,
   imports: [NgIf, NgFor, NgClass, RouterModule, SublevelComponent],
   templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
   animations: [
     fadeInOut,
     trigger('rotate', [
