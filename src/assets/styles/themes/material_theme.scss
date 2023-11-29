@@ -1,0 +1,47 @@
+@use "@angular/material" as mat;
+
+@import "../_variables.scss";
+
+@include mat.core();
+
+$typography: mat.define-typography-config(
+  $font-family: $bodyfont,
+);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette($light-theme-primary-palette),
+      accent: mat.define-palette($light-theme-accent-palette),
+      warn: mat.define-palette($light-theme-warn-palette),
+      // warn: A. Material ya define por defecto la paleta para warn
+    ),
+    typography: $typography,
+    density: 0,
+  )
+);
+
+//TODO: De momento el Dark theme de Material será el mismo que el Light
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette($light-theme-primary-palette),
+      accent: mat.define-palette($light-theme-accent-palette),
+      warn: mat.define-palette($light-theme-warn-palette),
+      // warn: A. Material ya define por defecto la paleta para warn
+    ),
+    typography: $typography,
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($light-theme);
+
+$my-custom-level: mat.define-typography-level(
+  $font-weight: 400,
+  $font-size: 1rem,
+);
+
+.app[data-theme="dark"] {
+  @include mat.all-component-colors($dark-theme);
+}

@@ -30,21 +30,21 @@
 // Alerts Background Color
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 .alert-danger {
-  background-color: $light-theme-second-body-color;
+  background-color: var(--second-body-color);
 }
 
 .alert-warning {
-  background-color: #fefaeb;
+  background-color: var(--second-body-color);
   color: $dark-warning-color;
 }
 
 .alert-info {
-  background-color: #f6fcfd;
+  background-color: var(--second-body-color);
   color: $dark-info-color;
 }
 
 .alert-success {
-  background-color: #eafaf6;
+  background-color: var(--second-body-color);
   color: $dark-success-color;
 }
 

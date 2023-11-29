@@ -16,10 +16,6 @@
     align-items: center;
     justify-content: space-between;
 
-    // .head-content-left {
-
-    // }
-
     .head-content-right {
       display: flex;
       align-items: center;
@@ -58,7 +54,7 @@
               color: #699dfa;
             }
           }
-        }        
+        }
       }
 
       .head-user-avatar-container {
@@ -126,7 +122,7 @@
 
       img {
         margin-right: 0.6rem;
-        height: 12px;        
+        height: 12px;
       }
     }
 
@@ -145,9 +141,9 @@
       padding: 0.35rem 1.5rem;
       font-size: 14px;
       font-weight: 400;
-      color: #495057;
+      // color: #495057;
       cursor: pointer;
-      
+
       .icon {
         margin-left: 0.6rem;
       }
@@ -161,13 +157,15 @@
 
 .ripple {
   background-position: center;
-  background-color: #ffffff;
+  // background-color: #ffffff;
+  // background-color: var(--second-body-color);
   transition: background 0.8s;
 }
 
 .ripple:hover,
 .ripple:focus {
-  background: #eff2f3 radial-gradient(circle, transparent, 1%, #eff2f3, 1%) center/15000%;
+  background: #eff2f3 radial-gradient(circle, transparent, 1%, #eff2f3, 1%)
+    center/15000%;
 }
 
 .ripple:active {

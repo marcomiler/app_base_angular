@@ -1,7 +1,7 @@
 .badge {
   padding: 3px 12px;
   font-size: 12px;
-  color: $light-theme-body-color;
+  color: var(--second-body-color);
 }
 
 .badge-info {
@@ -9,7 +9,7 @@
 }
 
 .badge-primary {
-  background-color: $light-theme-primary-color;
+  background-color: $primary-color;
 }
 
 .badge-danger {

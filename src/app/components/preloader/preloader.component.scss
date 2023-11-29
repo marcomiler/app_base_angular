@@ -1,4 +1,4 @@
-@import '../../../assets/styles/variables';
+@import "../../../assets/styles/variables";
 // loading component
 #cws_page_loader_container {
   position: fixed;
@@ -34,8 +34,8 @@
 #cws_page_loader:before {
   // border-bottom-color: rgba(255, 199, 0, 1);
   // border-left-color: rgba(255, 199, 0, 1);
-  border-bottom-color: $light-theme-primary-color;
-  border-left-color: $light-theme-primary-color;
+  border-bottom-color: $primary-color;
+  border-left-color: $primary-color;
 }
 
 #cws_page_loader:before,
@@ -49,7 +49,7 @@
   height: calc(100% - 12px);
   border-radius: 100%;
   // background: #474e54 url("../../../assets/img/logo_sidebar.svg");
-  background: $light-theme-light-primary-color url("../../../assets/img/logo_acity.svg");
+  background: url("../../../assets/img/logo_acity.svg");
   margin: 6px;
   animation: rotating 4s linear infinite;
 }
@@ -77,9 +77,13 @@
   // background-image: -webkit-linear-gradient(top, #ffc700, #ffc700);
   // background-image: -moz-linear-gradient(top, #ffc700, #ffc700);
   // background-image: linear-gradient(to bottom, #ffc700, #ffc700);
-  background-image: -webkit-linear-gradient(top, $light-theme-primary-color, $light-theme-primary-color);
-  background-image: -moz-linear-gradient(top, $light-theme-primary-color, $light-theme-primary-color);
-  background-image: linear-gradient(to bottom, $light-theme-primary-color, $light-theme-primary-color);
+  background-image: -webkit-linear-gradient(
+    top,
+    $primary-color,
+    $primary-color
+  );
+  background-image: -moz-linear-gradient(top, $primary-color, $primary-color);
+  background-image: linear-gradient(to bottom, $primary-color, $primary-color);
 }
 
 #cws_page_loader .inner:after {
@@ -89,9 +93,9 @@
   // background-image: -webkit-linear-gradient(top, transparent, #ffc700);
   // background-image: -moz-linear-gradient(top, transparent, #ffc700);
   // background-image: linear-gradient(to bottom, transparent, #ffc700);
-  background-image: -webkit-linear-gradient(top, transparent, $light-theme-primary-color);
-  background-image: -moz-linear-gradient(top, transparent, $light-theme-primary-color);
-  background-image: linear-gradient(to bottom, transparent, $light-theme-primary-color);
+  background-image: -webkit-linear-gradient(top, transparent, $primary-color);
+  background-image: -moz-linear-gradient(top, transparent, $primary-color);
+  background-image: linear-gradient(to bottom, transparent, $primary-color);
 }
 
 #cws_page_loader .inner:before,

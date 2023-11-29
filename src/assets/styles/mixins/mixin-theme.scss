@@ -1,0 +1,15 @@
+@import "../variables";
+
+@each $theme-name, $properties in $themes {
+  .app[data-theme="#{$theme-name}"] {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}: #{$property};
+    }
+  }
+}
+
+.app {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}

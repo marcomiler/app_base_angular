@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ContentComponent } from '@components/content/content.component';
 import { IsLoggedInGuard } from '@core/guards/is-logged-in.guard';
+import { FormsExampleComponent } from '@ui/forms-example/forms-example.component';
 import { WelcomePageComponent } from '@ui/welcome-page.component';
 
 export const ROUTES: Routes = [
@@ -31,6 +32,10 @@ export const ROUTES: Routes = [
           import('@ui/events-page/events.routes').then(
             (routes) => routes.EVENTS_ROUTES
           ),
+      },
+      {
+        path: 'forms',
+        component: FormsExampleComponent,
       },
       {
         path: '',

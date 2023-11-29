@@ -1,10 +1,11 @@
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-// Colors
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+//@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+//Colors
+//@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+@import "./mixins/mixin-theme.scss";
+@import "./mixins/mixin-font.scss";
 
 $color-array: (
-  "primary-color": $light-theme-primary-color,
-  "secondary-color": $light-theme-secondary-color,
+  "primary-color": $primary-color,
   "success-color": $success-color,
   "info-color": $info-color,
   "warning-color": $warning-color,
@@ -13,9 +14,10 @@ $color-array: (
   "muted-color": $muted-color,
   "white-color": $white-color,
   "black-color": $black-color,
-  "light-primary-color": $light-theme-light-primary-color,
+  // "light-primary-color": $light-theme-light-primary-color,
 );
 
+//TODO: se puede usar: text-primary-color
 @each $color-name, $color-value in $color-array {
   .text-#{$color-name} {
     color: $color-value;

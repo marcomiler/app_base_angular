@@ -17,7 +17,7 @@ a {
 }
 
 hr {
-  // background-color: $light-theme-text-color;
+  // background-color: var(--text-color);
   opacity: 0.4;
 }
 
@@ -235,11 +235,11 @@ ul {
 }
 
 .border-1 {
-  border: 1px solid $light-theme-border-color;
+  border: 1px solid var(--border-color);
 }
 
 .border-2 {
-  border: 2px solid $light-theme-border-color;
+  border: 2px solid var(--border-color);
 }
 
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
