@@ -1,0 +1,73 @@
+@use "@angular/material" as mat;
+
+@mixin color($theme) {
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+  $background-color: map-get($theme, background-color);
+  
+  $text-color: map-get($theme, text-color);
+  
+  $primary-palette: map-get($color-config, "primary");
+  $accent-palette: map-get($color-config, "accent");
+  $is-dark-theme: map-get($theme, is-dark);
+  $box-shadow: if($is-dark-theme, 5px 5px 10px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.1));
+  $bg-link: if($is-dark-theme, mat.get-color-from-palette($accent-palette, 200, 0.5), mat.get-color-from-palette($primary-palette, 200, 0.3));
+
+  .sidenav {
+    box-shadow: $box-shadow;
+    background-color: $background-color;
+
+    .logo-container {
+      .btn-close {
+        .fa-times {
+          color: $text-color !important;
+        }
+      }
+    }
+  }
+
+  // .sublevel-nav {
+    // .sublevel-nav-link:hover {
+    //   //TODO: deberia ser blanco intenso para dark y azul para claro
+    //     color: mat.get-color-from-palette($primary-palette, 500);
+    // }
+  // }
+
+  // .active-sublevel {
+  //   //TODO: deberia ser blanco intenso para dark y azul para claro
+  //   color: mat.get-color-from-palette($primary-palette, 500);     
+  // }
+
+  .active {
+    background-color: $bg-link;
+
+    .menu-collapse-icon,
+    .sidenav-link-icon {
+      color: mat.get-color-from-palette($primary-palette, 500);
+    }
+  }
+
+  .sidenav-collapsed {
+    background-color: $background-color;
+  }
+  
+  
+}
+
+@mixin typography($typography-config) {
+  .sidenav {
+    font-family: mat.font-family($typography-config);
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($typography-config);
+  }
+}

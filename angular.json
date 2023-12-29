@@ -55,7 +55,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/styles/style.scss"
+              "src/assets/styles/index.scss",
+              {
+                "bundleName": "dark-theme",
+                "inject": false,
+                "input": "src/assets/styles/themes/dark.scss"
+              }
             ],
             "scripts": []
           },
@@ -124,7 +129,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/styles/index.scss"
             ],
             "scripts": []
           }

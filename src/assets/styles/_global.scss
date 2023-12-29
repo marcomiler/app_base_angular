@@ -17,21 +17,19 @@ a {
 }
 
 hr {
-  background-color: var(--text-color);
+  // background-color: var(--text-color);
   opacity: 0.4;
 }
 
 .card {
   margin-bottom: 30px;
-  box-shadow: 0px 7px 30px 0px var(--box-shadow);
-  background-color: var(--second-body-color);
   border-radius: 20px;
 }
 
 .mat-mdc-card {
   margin-bottom: 30px !important;
-  box-shadow: 0px 7px 30px 0px var(--box-shadow) !important;
-  background-color: var(--second-body-color) !important;
+  // box-shadow: 0px 7px 30px 0px $light-theme-shadow !important;
+  // background-color: $light-theme-body-color !important;
   border-radius: 20px !important;
   padding: 0 !important;
 }

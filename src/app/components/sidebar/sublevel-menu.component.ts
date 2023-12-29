@@ -14,6 +14,7 @@ import { INavbarData } from '@components/sidebar/helper/helper';
   selector: 'app-sublevel-menu',
   standalone: true,
   imports: [NgIf, NgFor, NgClass, RouterModule],
+  styleUrls: ['./sidebar.component.scss'],
   animations: [
     trigger('submenu', [
       state(

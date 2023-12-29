@@ -1,9 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 
 import { PruebaComponent } from '@ui/users-page/prueba.componet';
 import { getState, subscribe } from '../../user-store';
@@ -11,13 +9,7 @@ import { getState, subscribe } from '../../user-store';
 @Component({
   selector: 'app-users-list-page',
   standalone: true,
-  imports: [
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    MatFormFieldModule,
-    PruebaComponent,
-  ],
+  imports: [MatButtonModule, PruebaComponent, MatCardModule],
   templateUrl: './users-list-page.component.html',
   styleUrls: ['./users-list-page.component.scss'],
 })
@@ -47,6 +39,8 @@ export class UsersListPageComponent implements OnInit {
   HandleClick(): void {
     this._http
       .get('https://jsonplaceholder.typicode.com/todos/1')
-      .subscribe((resp) => {});
+      .subscribe((resp) => {
+        console.log(resp);
+      });
   }
 }

@@ -1,18 +1,16 @@
-// @import 'assets/styles/_variables.scss';
-@import "../../../assets/styles/_variables.scss";
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Header
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 
 .head {
   width: calc(100% - 5rem);
-  margin-left: 5rem; //TODO::
+  margin-left: 5rem;
   z-index: 1;
-  transition: all 0.5s ease;
-  background-color: var(--body-color);
+  transition: all .5s ease;
   position: fixed;
   top: 0;
 
   .head-content {
-    background-color: var(--body-color);
-    box-shadow: var(--box-shadow);
     padding: 0.813rem, 1.563rem;
     display: flex;
     align-items: center;
@@ -69,7 +67,6 @@
             margin-bottom: -4px;
             width: 50px;
             border-radius: 50px;
-            box-shadow: var(--box-shadow);
             cursor: pointer;
           }
         }
@@ -81,7 +78,6 @@
           position: absolute;
           top: -2px;
           right: -3px;
-          background-color: $primary-color;
 
           &.pulse {
             animation: pulse-animation 1.2s infinite;
@@ -105,8 +101,6 @@
 .overlay {
   margin-top: 10px;
   border-radius: 0.25rem;
-  background-color: var(--second-body-color);
-  box-shadow: 0px 7px 30px 0px var(--box-shadow) !important;
 }
 
 .overlay-fall {
@@ -191,9 +185,9 @@
 
 @keyframes fall {
   0% {
-    box-shadow: 0 0 0 0 var(--second-body-color);
+    box-shadow:  0 0 0 0 blue;
   }
   100% {
-    box-shadow: 0 0 0 13px var(--second-body-color);
+    box-shadow: 0 0 0 13px blue;
   }
 }

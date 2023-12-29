@@ -1,0 +1,8 @@
+@use "./alert/alert-theme" as alert;
+@use "./sidebar/sidebar-theme" as sidebar;
+@use "./header/header-theme" as header;
+
+@mixin theme($theme) {
+  @include sidebar.theme($theme);
+  @include header.theme($theme);
+}

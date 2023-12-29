@@ -1,0 +1,128 @@
+/*********************************
+*          LIGHT PALETTE         *
+**********************************/
+
+$light-primary-palette: (
+  50: #e8f1fe,
+  100: #b3d4fb,
+  200: #80b7f9,
+  300: #4d9bf6,
+  400: #267ef3,
+  500: #105ef5,
+  600: #0f55dc,
+  700: #0d4bbe,
+  800: #0b409f,
+  900: #092f7a,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$light-accent-palette: (
+  50: #607d8b,
+  100: #546e7a,
+  200: #455a64,
+  300: #37474f,
+  400: #263238,
+  500: #102027,
+  600: #000a12,
+  700: #000000,
+  800: #000000,
+  900: #000000,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$light-warn-palette: (
+  100: #fcf1ed,
+  500: #e46a76,
+  700: #5d363a,
+  contrast: (
+    100: #393939,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
+
+/*********************************
+*           DARK PALETTE         *
+**********************************/
+$dark-primary-palette: (
+  50: #e8f1fe,
+  100: #b3d4fb,
+  200: #80b7f9,
+  300: #4d9bf6,
+  400: #267ef3,
+  500: #105ef5,
+  600: #0f55dc,
+  700: #0d4bbe,
+  800: #0b409f,
+  900: #092f7a,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$dark-accent-palette: (
+  50: #607d8b,
+  100: #546e7a,
+  200: #455a64,
+  300: #37474f,
+  400: #263238,
+  500: #102027,
+  600: #000a12,
+  700: #000000,
+  800: #000000,
+  900: #000000,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$dark-warn-palette: (
+  100: #fcf1ed,
+  500: #e46a76,
+  700: #5d363a,
+  contrast: (
+    100: #393939,
+    500: #ffffff,
+    700: #ffffff,
+  ),
+);
