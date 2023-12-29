@@ -16,6 +16,8 @@ import {
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DatetimepickerOptionComponent } from '@components/datetimepicker/datetimepicker-option.component';
+import { DatetimepickerComponent } from '@components/datetimepicker/datetimepicker.component';
 import { DirectivesModule } from '@core/directives/directives.module';
 // import { CUSTOM_FORMATS_DATE } from 'src/app/utils/constants';
 
@@ -30,6 +32,8 @@ import { DirectivesModule } from '@core/directives/directives.module';
     ReactiveFormsModule,
     MatButtonModule,
     DirectivesModule,
+    DatetimepickerComponent,
+    DatetimepickerOptionComponent,
   ],
   templateUrl: './forms-example.component.html',
   styleUrls: ['./forms-example.component.scss'],
@@ -49,6 +53,7 @@ export class FormsExampleComponent {
 
   public form: FormGroup = this._fb.group({
     date: [null, Validators.required],
+    datetime: [null, Validators.required],
     number: [null, Validators.required],
     string: [null, Validators.required],
     alphanumeric: [null, Validators.required],

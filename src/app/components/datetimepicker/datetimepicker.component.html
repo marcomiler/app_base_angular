@@ -1,0 +1,36 @@
+<div #dropReference>
+  <mat-form-field style="display: flex;" class="example">
+    <mat-label>Seleccionar una fecha</mat-label>
+    <input
+      #inputDate
+      matInput
+      readonly
+      type="text"
+      [matDatepicker]="picker"
+      [attr.disabled]="isDisabled ? true : null"
+      [value]="inputValue"
+      [min]=min
+      [max]="max"
+      (dateChange)="onChanged($event)"
+    >
+
+    <ng-container>
+      <div class="div-icons">
+        <mat-datepicker-toggle matIconSuffix [for]="picker" />
+        <!-- <mat-datepicker-toggle matIconSuffix [for]="picker" >
+          <mat-icon matDatepickerToggleIcon>mouse</mat-icon>
+        </mat-datepicker-toggle> -->
+        <mat-datepicker #picker></mat-datepicker>
+        <div>
+          <mat-icon disabled="isDisabled" class="time-icon" matIconSuffix (click)="showDropdown()">access_time</mat-icon>
+        </div>
+      </div>
+      <app-dropdown [reference]="dropReference">
+        <div class="dropdown-options-container">
+          <ng-content [select]=selectedOption />
+        </div>
+      </app-dropdown>
+    </ng-container>
+  </mat-form-field>
+
+</div>

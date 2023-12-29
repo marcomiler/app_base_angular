@@ -1,5 +1,16 @@
 <form [formGroup]="form" (submit)="handleClick()">
   <div class="forms-example_container">
+
+    <app-datetimepicker formControlName="datetime" placeholder="Datetime">
+      <app-datetimepicker-option value="'00:00'" />
+      <app-datetimepicker-option value="'00:30'" />
+      <app-datetimepicker-option value="'01:00'" />
+      <app-datetimepicker-option value="'01:30'" />
+    </app-datetimepicker>
+    <br />
+    <br />
+    <hr />
+
     <mat-form-field class="example-full-width">
       <mat-label>Seleccionar una fecha</mat-label>
       <input
