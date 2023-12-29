@@ -1,6 +1,7 @@
 @use "@angular/material" as mat;
 
 @import "../_variables.scss";
+@import '@mat-datetimepicker/core/datetimepicker/datetimepicker-theme.scss';
 
 @include mat.core();
 
@@ -36,6 +37,7 @@ $dark-theme: mat.define-dark-theme(
 );
 
 @include mat.all-component-themes($light-theme);
+@include mat-datetimepicker-theme($light-theme);
 
 $my-custom-level: mat.define-typography-level(
   $font-weight: 400,
@@ -44,4 +46,5 @@ $my-custom-level: mat.define-typography-level(
 
 .app[data-theme="dark"] {
   @include mat.all-component-colors($dark-theme);
+  @include mat-datetimepicker-theme($dark-theme);
 }
