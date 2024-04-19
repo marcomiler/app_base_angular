@@ -19,6 +19,7 @@ $light-theme: mat.define-light-theme(
     ),
     typography: $typography,
     density: 0,
+    background-color: "red"
   )
 );
 
@@ -33,11 +34,14 @@ $dark-theme: mat.define-dark-theme(
     ),
     typography: $typography,
     density: 0,
+    background-color: "blue"
   )
 );
 
 @include mat.all-component-themes($light-theme);
 @include mat-datetimepicker-theme($light-theme);
+// @include mat.all-component-themes($dark-theme);
+// @include mat-datetimepicker-theme($dark-theme);
 
 $my-custom-level: mat.define-typography-level(
   $font-weight: 400,

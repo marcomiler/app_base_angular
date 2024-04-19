@@ -1,12 +1,17 @@
 @use "@angular/material" as mat;
+@use '@fireflysemantics/sass-logger' as logger;
+@import './../../app-color-palette.scss';
 
 @mixin color($theme) {
   // Get the color config from the theme.
   $color-config: mat.get-color-config($theme);
   $background-color: map-get($theme, background-color);
+
+  //depurar SASS
+  $result: logger.pretty-map($color-config);
+  @debug $result;
   
-  $text-color: map-get($theme, text-color);
-  
+  $text-color: map-get($theme, text-color);  
   $primary-palette: map-get($color-config, "primary");
   $accent-palette: map-get($color-config, "accent");
   $is-dark-theme: map-get($theme, is-dark);
@@ -48,7 +53,7 @@
   }
 
   .sidenav-collapsed {
-    background-color: $background-color;
+    background-color: if($is-dark-theme, $dark-bg-color, $light-bg-color);
   }
   
   

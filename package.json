@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@fireflysemantics/sass-logger": "^1.0.2",
     "@mat-datetimepicker/core": "^13.0.1",
     "@mat-datetimepicker/moment": "^13.0.1",
     "crypto-js": "^4.2.0",

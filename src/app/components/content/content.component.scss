@@ -1,10 +1,11 @@
 .app-body_container {
   width: calc(100% - 5rem);
   margin-left: 5rem;
-  z-index: 0;
   top: 0;
-  position: absolute;
   transition: all 0.5s ease;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
 }
 
 .body-trimmed {

@@ -5,10 +5,11 @@
 .head {
   width: calc(100% - 5rem);
   margin-left: 5rem;
-  z-index: 1;
   transition: all .5s ease;
-  position: fixed;
+  padding-left: 10px;
+  padding-right: 10px;
   top: 0;
+  position: fixed;
 
   .head-content {
     padding: 0.813rem, 1.563rem;
@@ -91,11 +92,14 @@
 .head-trimmed {
   width: calc(100% - 16.5625rem);
   margin-left: 16.5625rem;
+  z-index: 10;
 }
 
 .head-md-screen {
   width: calc(100% - 5rem);
   margin-left: 5rem;
+
+  z-index: 10;
 }
 
 .overlay {
