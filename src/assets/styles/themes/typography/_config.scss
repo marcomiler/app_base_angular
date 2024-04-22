@@ -1,0 +1,89 @@
+@use '@angular/material' as mat;
+
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+// Font Family | podemos configurar mas fuentes, revisar doc
+// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
+@font-face {
+  font-family: "Sedan", serif;
+  src: url("/assets/fonts/Sedan/Sedan-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Work Sans", sans-serif;
+  src: url("/assets/fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
+}
+
+$heading-font-family: "'Sedan', serif";
+$regular-font-family: "'Work Sans', sans-serif";
+
+$app-typography: mat.define-typography-config(
+  $font-family: $regular-font-family,
+
+  $headline-1: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 112px,
+    $font-weight: 800
+  ),
+  $headline-2: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 56px,
+    $font-weight: 800
+  ),
+  $headline-3: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 45px,
+    $line-height: 48px,
+    $font-weight: 800
+  ),
+  $headline-4: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 34px,
+    $line-height: 40px,
+    $font-weight: 800
+  ),
+  $headline-5: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 24px,
+    $line-height: 32px,
+    $font-weight: 800
+  ),
+  $headline-6: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 20px,
+    $line-height: 32px,
+    $font-weight: 800
+  ),
+  $subtitle-1: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 18px,
+    $line-height: 28px,
+    $font-weight: 600
+  ),
+  $subtitle-2: mat.define-typography-level(
+    $font-family: $heading-font-family,
+    $font-size: 18px,
+    $line-height: 24px,
+    $font-weight: 600
+  ),
+  $body-2: mat.define-typography-level(
+    $font-size: 16px,
+    $font-weight: 400
+  ),
+  $body-1: mat.define-typography-level(
+    $font-size: 16px,
+  ),
+  $button: mat.define-typography-level(
+    $font-size: 16px,
+  ),
+  $caption: mat.define-typography-level(
+    $font-size: 16px
+  ),
+);
+
+/*
+  $headline-5 <> h1
+  $headline-6 <> h2
+  $subtitle-1 <> h3
+  $body-1 <> h4, inputs, buttons, etc
+  $body-2 <> h5, H6, p, caption
+*/

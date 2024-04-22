@@ -1,4 +1,5 @@
 @use "@angular/material" as mat;
+@use "./typography/config" as typography;
 @include mat.core();
 @import "./app-color-palette.scss";
 
@@ -8,7 +9,8 @@ $mat-light-theme: mat.define-light-theme(
       primary: mat.define-palette($light-primary-palette),
       accent: mat.define-palette($light-accent-palette),
       warn: mat.define-palette($light-warn-palette),
-    )
+    ),
+    typography: typography.$app-typography
   )
 );
 $mat-dark-theme: mat.define-dark-theme(
@@ -17,6 +19,7 @@ $mat-dark-theme: mat.define-dark-theme(
       primary: mat.define-palette($dark-primary-palette),
       accent: mat.define-palette($dark-accent-palette),
       warn: mat.define-palette($dark-warn-palette),
-    )
+    ),
+    typography: typography.$app-typography
   )
 );

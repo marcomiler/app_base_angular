@@ -1,8 +1,6 @@
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
 // Sidebar
 // @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-// @import "./../../../assets/styles/themes/app-color-palette.scss";
-
 .sidenav {
   transition: all 0.5s ease;
   position: fixed;
@@ -29,10 +27,15 @@
       border: none;
     }
 
-    .logo-text {
-      margin-left: 1.5rem;
-      font-size: 24px;
-      font-weight: 700;
+    .logo-text-container {
+      text-wrap: nowrap;
+      display: flex;
+      align-items: center;
+      margin: auto;
+
+      h2 {
+        margin: 0;
+      }
     }
 
     .btn-close {
@@ -75,7 +78,6 @@
       display: flex;
       align-items: center;
       height: 3rem;
-      // color: $light-theme-text-color;
       text-decoration: none;
       border-radius: 0.625rem;
       transition: all 0.3s ease;
@@ -92,15 +94,6 @@
         margin-left: 1.5rem;
       }
     }
-
-    .sidenav-nav-link:hover {
-      // background-color: $light-theme-sidebar-link-active-color;
-      // color: $light-theme-sidebar-text-link-active-color;
-
-      // .menu-collapse-icon {
-      //   color: $light-theme-sidebar-text-link-active-color;
-      // }
-    }
   }
 }
 
@@ -116,7 +109,9 @@
 }
 
 .active-sublevel {
-  // color: $light-theme-sidebar-text-link-active-color !important;
+  .sublevel-link-text {
+    text-decoration: underline !important;
+  }
 }
 
 .menu-collapse-icon {
@@ -129,7 +124,6 @@
 }
 
 .sublevel-nav {
-  list-style: none;
   margin-left: 10px;
 
   .sublevel-nav-item {
@@ -140,12 +134,12 @@
       // color: #898989;
       line-break: anywhere;
       overflow: hidden;
-      text-decoration: none;
+      // text-decoration: none;
       border-radius: 0.625rem;
       transition: all 0.3s ease;
 
       .sublevel-link-icon {
-        font-size: 4px;
+        font-size: 8px;
         width: 2rem;
         min-width: 2rem;
         margin: 0 0.5rem;

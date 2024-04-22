@@ -66,7 +66,6 @@ import { INavbarData } from '@components/sidebar/helper/helper';
           *ngIf="item.items && item.items.length > 0"
           (click)="handleClick(item)"
           class="sublevel-nav-link"
-          [ngClass]="getActivateClass(item)"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
           <span *ngIf="collapsed" class="sublevel-link-text">{{
@@ -86,6 +85,7 @@ import { INavbarData } from '@components/sidebar/helper/helper';
           [routerLink]="[item.routerLink]"
           routerLinkActive="active-sublevel"
           [routerLinkActiveOptions]="{ exact: true }"
+          [ngClass]="getActivateClass(item)"
         >
           <i class="sublevel-link-icon fa fa-circle"></i>
           <span *ngIf="collapsed" class="sublevel-link-text">{{

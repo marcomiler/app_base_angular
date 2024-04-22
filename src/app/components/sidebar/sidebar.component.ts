@@ -28,7 +28,7 @@ const navbarData: INavbarData[] = [
     label: 'Usuarios',
     items: [
       {
-        routerLink: 'users',
+        routerLink: 'users/list',
         label: 'Listado Usuarios',
       },
       {

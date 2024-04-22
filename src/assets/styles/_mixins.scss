@@ -17,7 +17,7 @@ $color-array: (
   // "light-primary-color": $light-theme-light-primary-color,
 );
 
-//TODO: se puede usar: text-primary-color
+//INFO: se puede usar: text-primary-color
 @each $color-name, $color-value in $color-array {
   .text-#{$color-name} {
     color: $color-value;

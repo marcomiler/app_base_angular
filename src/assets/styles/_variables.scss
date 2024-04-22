@@ -21,78 +21,7 @@ $muted-color: #949db2;
 $white-color: #ffffff;
 $black-color: #000;
 
-//PRUEBA !
-$themes: (
-  "light": (
-    body-color: #ffffff,
-    second-body-color: #f9fcfe,
-    //#a7ddff,
-    text-color: #393939,
-    primary-color: $primary-color,
-    light-primary-color: #e3f5ff,
-    border-color: #393939,
-    box-shadow: rgba(113, 122, 131, 0.11),
-    //SIDEBAR PROPERTIES
-    sidebar-icon-color: #393939,
-    sidebar-link-color: #393939,
-    sidebar-link-bg-active-color: #e3f5ff,
-    sidebar-text-link-active-color: $primary-color,
-    sidebar-icon-active-color: $primary-color,
-  ),
-  "dark": (
-    body-color: #1c1f25,
-    second-body-color: #2d343e,
-    text-color: #fcf3f4,
-    primary-color: $primary-color,
-    light-primary-color: #e3f5ff,
-    border-color: #d8d8d8,
-    box-shadow: rgba(113, 122, 131, 0.11),
-    //SIDEBAR PROPERTIES
-    sidebar-icon-color: #fcf3f4,
-    sidebar-link-color: #1c1f25,
-    sidebar-link-bg-active-color: #2d343e,
-    sidebar-text-link-active-color: #ffffff,
-    sidebar-icon-active-color: $primary-color,
-  ),
-);
-
 //----------------------------------------//
-
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-// Material Theme Colors
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-$light-theme-primary-palette: (
-  100: #fcf1ed,
-  500: $primary-color,
-  700: #425a61,
-  contrast: (
-    100: #393939,
-    500: #ffffff,
-    700: #ffffff,
-  ),
-);
-
-$light-theme-accent-palette: (
-  100: #fcf1ed,
-  500: #fb9678,
-  700: #425a61,
-  contrast: (
-    100: #393939,
-    500: #ffffff,
-    700: #ffffff,
-  ),
-);
-
-$light-theme-warn-palette: (
-  100: #fcf1ed,
-  500: #e46a76,
-  700: #5d363a,
-  contrast: (
-    100: #393939,
-    500: #ffffff,
-    700: #ffffff,
-  ),
-);
 
 $base-font-size: 1rem;
 $base-line-height: 1.25 * $base-font-size;
@@ -129,23 +58,3 @@ $text-sizes: (
     line-height: $base-line-height * 2,
   ),
 );
-
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-// Font Family
-// @=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@=@
-@font-face {
-  font-family: "Work Sans", sans-serif;
-  src: url("../fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
-}
-
-$bodyfont: "Work Sans", sans-serif;
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: $bodyfont;
-}

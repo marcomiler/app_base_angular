@@ -8,7 +8,7 @@ export const USER_ROUTES: Route[] = [
     component: UsersPageComponent,
     children: [
       {
-        path: '',
+        path: 'list',
         component: UsersListPageComponent,
       },
       {

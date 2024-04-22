@@ -1,12 +1,12 @@
 @use "@angular/material" as mat;
 @use "./themes/components/" as components;
+@use "./themes/typography/config";
 
 @import "./variables";
 @import "./global";
 @import "./mixins";
 @import "./core/app";
 @import "./grid/grid";
-@import "./layouts/layouts";
 @import "./components/components";
 @import "~@angular/cdk/overlay-prebuilt.css";
 
@@ -16,6 +16,7 @@
 
 @include app-theme($mat-light-theme);
 @include components.theme($mat-light-theme);
+@include mat.typography-hierarchy(config.$app-typography);
 
 @media (prefers-color-scheme: dark) {
   @include app-theme-color($mat-dark-theme);
